@@ -13,8 +13,8 @@
 		9F5D682922FC33E80097A6F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F5D682722FC33E80097A6F5 /* LaunchScreen.storyboard */; };
 		9F5D683122FC34AD0097A6F5 /* PersonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D683022FC34AD0097A6F5 /* PersonsViewController.swift */; };
 		9F5D683322FC35420097A6F5 /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D683222FC35420097A6F5 /* PersonDetailViewController.swift */; };
-		9F5D683522FD61FD0097A6F5 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D683422FD61FD0097A6F5 /* Person.swift */; };
 		9F5D683E22FEC7910097A6F5 /* PersonsInSectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5D683D22FEC7910097A6F5 /* PersonsInSectionsViewController.swift */; };
+		9F62C2C822FF3C2F00B46FB0 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F62C2C722FF3C2F00B46FB0 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +28,7 @@
 		9F5D683222FC35420097A6F5 /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		9F5D683422FD61FD0097A6F5 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Person.swift; path = ../Person.swift; sourceTree = "<group>"; };
 		9F5D683D22FEC7910097A6F5 /* PersonsInSectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsInSectionsViewController.swift; sourceTree = "<group>"; };
+		9F62C2C722FF3C2F00B46FB0 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Person.swift; path = EmployeeTableApp/Model/Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +45,7 @@
 		9F5D681222FC33E40097A6F5 = {
 			isa = PBXGroup;
 			children = (
+				9F62C2C722FF3C2F00B46FB0 /* Person.swift */,
 				9F5D681D22FC33E50097A6F5 /* EmployeeTableApp */,
 				9F5D681C22FC33E50097A6F5 /* Products */,
 			);
@@ -176,9 +178,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F62C2C822FF3C2F00B46FB0 /* Person.swift in Sources */,
 				9F5D683322FC35420097A6F5 /* PersonDetailViewController.swift in Sources */,
 				9F5D681F22FC33E50097A6F5 /* AppDelegate.swift in Sources */,
-				9F5D683522FD61FD0097A6F5 /* Person.swift in Sources */,
 				9F5D683122FC34AD0097A6F5 /* PersonsViewController.swift in Sources */,
 				9F5D683E22FEC7910097A6F5 /* PersonsInSectionsViewController.swift in Sources */,
 			);
