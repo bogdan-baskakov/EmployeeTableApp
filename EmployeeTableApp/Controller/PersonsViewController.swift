@@ -31,6 +31,7 @@ class PersonsViewController: UITableViewController {
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = tableView.indexPathForSelectedRow {
             let detailVC = segue.destination as! PersonDetailViewController
+            
             detailVC.personName = personsArray[indexPath.row].name
             detailVC.personSurname = personsArray[indexPath.row].surname
             detailVC.personEmail = personsArray[indexPath.row].email
