@@ -10,21 +10,16 @@ import UIKit
 
 class PersonsInSectionsViewController: UITableViewController {
     
-    let personsArray = Person.getPersons()
+    let persons = Person.getPersons()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        print("ARRAY - \(personsArray)")
-    }
-    
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return personsArray.count
+        return persons.count
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let personName =  personsArray[section].name + " " + personsArray[section].surname
-        return personName
+        let person = persons[section]
+        return person.name + " " + person.surname
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,7 +29,9 @@ class PersonsInSectionsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "sectionsCell", for: indexPath)
         
-        cell.textLabel?.text = personsArray[indexPath.row].email
+        let person = persons[indexPath.section]
+        
+        cell.textLabel?.text = indexPath.row == 0 ? person.email : person.phoneNumber
         
         return cell
     }

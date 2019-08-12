@@ -20,28 +20,28 @@ var phoneNumbersArray = ["+7(000)322-23-22",
                          "+7(454)572-93-21"]
 
 struct Person {
+    
     var name: String
     var surname: String
     var email: String
     var phoneNumber: String
 
     static func getPersons() -> [Person] {
+        
         var randomPersons: [Person] = []
-
-        if namesArray.count == surnamesArray.count &&
-            namesArray.count == emailsArray.count &&
-            namesArray.count == phoneNumbersArray.count {
-            while namesArray.count > 0 {
-                let firstname = namesArray.remove(at: Int.random(in: 0..<namesArray.count))
-                let surname = surnamesArray.remove(at: Int.random(in: 0..<surnamesArray.count))
-                let email = emailsArray.remove(at: Int.random(in: 0..<emailsArray.count))
-                let phoneNum = phoneNumbersArray.remove(at: Int.random(in: 0..<phoneNumbersArray.count))
-                
-                randomPersons.append(Person(name: firstname,
-                                            surname: surname,
-                                            email: email,
-                                            phoneNumber: phoneNum))
-            }
+        
+        let name = namesArray.shuffled()
+        let surname = surnamesArray.shuffled()
+        let email = emailsArray.shuffled()
+        let phone = phoneNumbersArray.shuffled()
+        
+        for index in 0..<name.count {
+            let person = Person(name: name[index],
+                                surname: surname[index],
+                                email: email[index],
+                                phoneNumber: phone[index])
+            
+            randomPersons.append(person)
         }
         
         return randomPersons

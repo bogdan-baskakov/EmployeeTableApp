@@ -17,19 +17,16 @@ class PersonDetailViewController: UIViewController {
     @IBOutlet var emailLabel: UILabel!
     @IBOutlet var phoneNumberLabel: UILabel!
     
-    var personName: String!
-    var personSurname: String!
-    var personEmail: String!
-    var personPhoneNumber: String!
-    
+    var person: Person!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        imageView.image = UIImage(named: personName)
-        nameLabel.text = personName
-        surnameLabel.text = personSurname
-        emailLabel.text = personEmail
-        phoneNumberLabel.text = personPhoneNumber
+    
+        imageView.image = UIImage(named: person.name)
+        nameLabel.text = person.name
+        surnameLabel.text = person.surname
+        emailLabel.text = person.email
+        phoneNumberLabel.text = person.phoneNumber
     }
 
 }

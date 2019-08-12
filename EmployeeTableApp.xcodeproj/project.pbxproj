@@ -26,9 +26,8 @@
 		9F5D682A22FC33E80097A6F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F5D683022FC34AD0097A6F5 /* PersonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsViewController.swift; sourceTree = "<group>"; };
 		9F5D683222FC35420097A6F5 /* PersonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
-		9F5D683422FD61FD0097A6F5 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Person.swift; path = ../Person.swift; sourceTree = "<group>"; };
 		9F5D683D22FEC7910097A6F5 /* PersonsInSectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsInSectionsViewController.swift; sourceTree = "<group>"; };
-		9F62C2C722FF3C2F00B46FB0 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Person.swift; path = EmployeeTableApp/Model/Person.swift; sourceTree = "<group>"; };
+		9F62C2C722FF3C2F00B46FB0 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +44,6 @@
 		9F5D681222FC33E40097A6F5 = {
 			isa = PBXGroup;
 			children = (
-				9F62C2C722FF3C2F00B46FB0 /* Person.swift */,
 				9F5D681D22FC33E50097A6F5 /* EmployeeTableApp */,
 				9F5D681C22FC33E50097A6F5 /* Products */,
 			);
@@ -74,7 +72,7 @@
 		9F5D683622FD62660097A6F5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9F5D683422FD61FD0097A6F5 /* Person.swift */,
+				9F62C2C722FF3C2F00B46FB0 /* Person.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

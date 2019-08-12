@@ -10,19 +10,19 @@ import UIKit
 
 class PersonsViewController: UITableViewController {
     
-    private let personsArray = Person.getPersons()
+    private let persons = Person.getPersons()
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return personsArray.count
+        return persons.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        let personFullName = personsArray[indexPath.row].name + " " + personsArray[indexPath.row].surname
+        let person = persons[indexPath.row]
         
-        cell.textLabel?.text = personFullName
-        cell.imageView?.image = UIImage(named: personsArray[indexPath.row].name)
+        cell.textLabel?.text = person.name + " " + person.surname
+        cell.imageView?.image = UIImage(named: person.name)
         
         return cell
     }
@@ -31,11 +31,7 @@ class PersonsViewController: UITableViewController {
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = tableView.indexPathForSelectedRow {
             let detailVC = segue.destination as! PersonDetailViewController
-            
-            detailVC.personName = personsArray[indexPath.row].name
-            detailVC.personSurname = personsArray[indexPath.row].surname
-            detailVC.personEmail = personsArray[indexPath.row].email
-            detailVC.personPhoneNumber = personsArray[indexPath.row].phoneNumber
+            detailVC.person = persons[indexPath.row]
         }
      }
 
